@@ -1,22 +1,8 @@
 from typing import NamedTuple, Callable
 from time import time
 from multiprocessing import Pool
-import logging
 
 import numpy as np
-
-LOGGER = logging.getLogger('main')
-LOGGER.setLevel('DEBUG')
-
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.DEBUG)  # Устанавливаем уровень логирования для обработчика
-
-# Создаем форматтер (необязательно, но полезно)
-formatter = logging.Formatter('%(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-
-# Добавляем обработчик к логгеру
-# LOGGER.addHandler(console_handler)
 
 class CubicEquation(NamedTuple):
     a: np.float64
